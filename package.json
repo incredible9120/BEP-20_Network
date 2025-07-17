@@ -1,0 +1,30 @@
+{
+  "name": "humtoken-app",
+  "version": "1.0.0",
+  "description": "HUMToken Smart Contract Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start-servers.js",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "node start-servers.js",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../smart-contract && npm install",
+    "health": "cd backend && node health-check.js",
+    "deploy": "cd smart-contract && npx hardhat run deploy-and-verify.js --network bscTestnet",
+    "verify": "cd smart-contract && npx hardhat run verify-deployment.js --network bscTestnet"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "bsc",
+    "smart-contract",
+    "token",
+    "react",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
